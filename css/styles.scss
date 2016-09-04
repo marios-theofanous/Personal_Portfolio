@@ -1,0 +1,158 @@
+$orange: #f05f40;
+$white-text: #ffffff;
+
+#wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  background-image: url('../img/header.jpg');
+  text-align: center;
+  color: white;
+}
+
+#wrapper2 {
+  background-color: $orange;
+}
+
+#wrapper3 {
+  background-color: white;
+}
+
+#wrapper4 {
+  background-color: #eeeeee;
+}
+
+#headerHr {
+  position: relative;
+  height: 3px;
+  border: 0;
+  border-top: 3px solid $orange;
+  margin: 30px auto;
+  padding: 0;
+  width: 30px;
+  text-align: center;
+}
+
+/*Aligns the collapsed navbar button to the right*/
+#navbar-collapsed-button {
+  float: right;
+}
+
+/*Testing to make the navbar see-through*/
+/*#navtest {*/
+/*background: none;*/
+/*border-bottom: solid 1px snow;*/
+/*}*/
+
+.nav-see-through {
+  background: none;
+  border-bottom: solid 1px #eee;
+  transition: all 0.5s ease;
+}
+
+.nav-orange {
+  background: white;
+  transition: all 0.5s ease;
+
+  .navbar-brand {
+    color: $orange;
+  }
+}
+
+
+@media (max-width: 543px) {
+  .filler {
+    padding: 30px;
+  }
+}
+@media (min-width: 544px) {
+  .filler {
+    padding: 35px;
+  }
+}
+@media (min-width: 768px) {
+  .filler {
+    padding: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .filler {
+    padding: 45px;
+  }
+}
+@media (min-width: 1200px) {
+  .filler {
+    padding: 50px;
+  }
+}
+
+.card-container {
+  z-index: -1;
+  margin: 0.5rem;
+}
+
+.card-frame {
+
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+
+}
+
+.card-container:hover .card-frame{
+  transform: rotateY(180deg);
+}
+
+
+.card-front  {
+  position: relative;
+  transform: rotateY(0deg);
+  width: 100%;
+  height: auto;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.card-back{
+  z-index: 1;
+  position: absolute;
+  display: block;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  /*box-sizing: border-box;*/
+  transform: rotateY(0deg);
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+.card-frame .card-front .card {
+  margin-bottom: 0px;
+  background-color: whitesmoke;
+
+}.card-frame .card-back .card {
+   margin-bottom: 0px;
+   height: 100%;
+ }
+
+
+
+.titles {
+  text-align: center;
+  text-transform: capitalize;
+  color: $white-text;
+}
+
+.card-img-space {
+  margin-top: 0.5rem;
+}
+
+.btn-custom {
+  background-color: $orange;
+  color: $white-text;
+}
