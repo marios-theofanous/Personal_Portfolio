@@ -1,5 +1,11 @@
 $orange: #f05f40;
+$orange-focus: #f04c2d;
 $white-text: #ffffff;
+$main-font: Roboto, sans-serf;
+
+.header-text {
+  color: #eeeeee;
+}
 
 #wrapper {
   position: relative;
@@ -13,18 +19,41 @@ $white-text: #ffffff;
   background-image: url('../img/header.jpg');
   text-align: center;
   color: white;
+  overflow: auto; //temporary fix until a more elegant solution
 }
 
 #wrapper2 {
   background-color: $orange;
+  padding: 1em 0 2.3em;
 }
 
 #wrapper3 {
   background-color: white;
+  margin: 2em 0;
 }
 
 #wrapper4 {
-  background-color: #eeeeee;
+  background-color: #222;
+  padding: 1em 0;
+}
+
+.footer-text {
+  color: $white-text;
+}
+
+h4, h5, h6, p{
+  font-family: $main-font;
+}
+
+.learn-more-btn {
+  background-color: $orange;
+  border-radius: 20px;
+  margin: 10px 0px;
+  color: $white-text;
+  text-transform: uppercase;
+  font-family: $main-font;
+  font-weight: 300;
+
 }
 
 #headerHr {
@@ -58,9 +87,13 @@ $white-text: #ffffff;
 .nav-orange {
   background: white;
   transition: all 0.5s ease;
+  border-bottom: solid 1px #eee;
 
   .navbar-brand {
     color: $orange;
+  }
+  .navbar-brand:focus, .navbar-brand:hover{
+    color: $orange-focus;
   }
 }
 
@@ -99,7 +132,7 @@ $white-text: #ffffff;
 .card-frame {
 
   transform-style: preserve-3d;
-  transition: all 1.0s linear;
+  transition: all 0.75s linear;
 
 }
 
@@ -146,6 +179,7 @@ $white-text: #ffffff;
   text-align: center;
   text-transform: capitalize;
   color: $white-text;
+  font-family: $main-font;
 }
 
 .card-img-space {
@@ -155,4 +189,21 @@ $white-text: #ffffff;
 .btn-custom {
   background-color: $orange;
   color: $white-text;
+  font-family: $main-font;
+}
+
+.btn-custom:focus, .learn-more-btn:focus {
+  outline: 0 !important;
+}
+
+.btn-custom:hover, .learn-more-btn:hover {
+  background-color: $orange-focus;
+}
+
+#footer-title {
+  margin-top: 1em;
+}
+
+.overflow-fix {
+  height: auto !important;
 }
