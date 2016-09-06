@@ -9,12 +9,12 @@ var myChart = new Chart(ctx, {
         datasets: [
             {
                 label: "Web development",
-                backgroundColor: "rgba(179,181,198,0.2)",
-                borderColor: "rgba(179,181,198,1)",
-                pointBackgroundColor: "rgba(179,181,198,1)",
+                backgroundColor: "rgba(240,95,64,0.2)",
+                borderColor: "rgba(240,94,64,1)",
+                pointBackgroundColor: "rgba(240,95,64,1)",
                 pointBorderColor: "#fff",
                 pointHoverBackgroundColor: "#fff",
-                pointHoverBorderColor: "rgba(179,181,198,1)",
+                pointHoverBorderColor: "rgba(34,34,34,1)",
                 data: [65, 59, 90, 81, 56, 55]
             }
         ]
@@ -30,8 +30,7 @@ var myChart = new Chart(ctx, {
                 beginAtZero: true,
                 display: false
             }
-        }
-
+        },
     }
 })
 
@@ -39,16 +38,16 @@ var ctx2 = document.getElementById("myChart2");
 var myChart2 = new Chart(ctx2, {
     type: 'radar',
     data: {
-        labels: ["Java", "Pythong", "C++", "C#", "Lua"],
+        labels: ["Java", "Python", "C++", "C#", "Lua"],
         datasets: [
             {
                 label: "Other languages",
-                backgroundColor: "rgba(179,181,198,0.2)",
-                borderColor: "rgba(179,181,198,1)",
-                pointBackgroundColor: "rgba(179,181,198,1)",
+                backgroundColor: "rgba(240,95,64,0.2)",
+                borderColor: "rgba(240,94,64,1)",
+                pointBackgroundColor: "rgba(240,95,64,1)",
                 pointBorderColor: "#fff",
                 pointHoverBackgroundColor: "#fff",
-                pointHoverBorderColor: "rgba(179,181,198,1)",
+                pointHoverBorderColor: "rgba(34,34,34,1)",
                 data: [65, 59, 90, 81, 56]
             }
         ]
