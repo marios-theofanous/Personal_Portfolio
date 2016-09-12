@@ -1,77 +1,26 @@
+//Main variables
 $orange: #f05f40;
 $orange-focus: #f04c2d;
+$white-card-bg: #eee;
+$white-border: #ffffff;
+$white-bg: #ffffff;
 $white-text: #ffffff;
+$black: #222222;
 $main-font: Roboto, sans-serf;
 
+//Element variables
+$card-img-border: $orange-focus;
 
-
-.header-text {
-  color: #eeeeee;
-}
-
-
-
-#wrapper {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  background-position: center;
-  background-image: url('../img/header.jpg');
-  text-align: center;
-  color: white;
-  overflow: auto; //temporary fix until a more elegant solution
-}
-
-#wrapper2 {
-  background-color: #222;
-  padding: 1em 0 2.3em;
-}
-
-#wrapper3 {
-  background-color: white;
-  padding: 2em 0;
-}
-
-#wrapper4 {
-  background-color: white;
-  padding: 1em 0;
-}
-
-.card-frame .card-front .card img {
-  border: 1.5px solid $orange;
-}
-
-.footer-text {
-  color: #222;
-}
-
-.footer-paragraph {
-  @extend .footer-text;
-  text-align: center;
-  padding-bottom: 1em;
-}
-
+//Other
 h4, h5, h6, p{
   font-family: $main-font;
 }
-
-
-.learn-more-btn {
-  background-color: $orange;
-  border-radius: 20px;
-  margin: 10px 0px;
+.titles {
+  text-align: center;
+  text-transform: capitalize;
   color: $white-text;
-  text-transform: uppercase;
-  font-family: Tahoma;
-  font-weight: bold;
-  font-size: smaller;
-
+  font-family: $main-font;
 }
-
 .customHr {
   position: relative;
   height: 3px;
@@ -83,27 +32,93 @@ h4, h5, h6, p{
   text-align: center;
 }
 
-/*Aligns the collapsed navbar button to the right*/
+//Wrappers' css
+#wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  background-image: url('../img/header.jpg');
+  text-align: center;
+  color: $white-text;
+  @media (max-width: 543px) {
+    height: auto;
+    padding: 8em 0;
+  }
+  @media (min-width: 544px) {
+    padding-top: 15vh;
+  }
+  img {
+    max-height: 30vh;
+  }
+}
+
+#wrapper2 {
+  background-color: #222;
+  padding: 1em 0 2.3em;
+}
+
+#wrapper3 {
+  background-color: $white-bg;
+  padding: 2em 0;
+  .container-fluid {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+#wrapper4 {
+  background-color: $white-bg;
+  padding: 1em 0;
+}
+
+.view-projects-btn {
+  background-color: $orange;
+  border-radius: 20px;
+  margin: 10px 0px;
+  color: $white-text;
+  text-transform: uppercase;
+  font-family: Tahoma;
+  font-weight: bold;
+  font-size: smaller;
+}
+
+//Nav-bar CSS
+
+.navbar-toggler {
+  color: $white-bg; }
+.navbar-toggler:focus {
+  outline: none; }
+
+@media (max-width: 543px) {
+  .navbar-toggleable-xs {
+    clear: both; }
+  .navbar-toggleable-xs .navbar-nav {
+    float: none !important; }
+  .navbar-toggleable-xs .navbar-nav .nav-item + .nav-item {
+    margin-left: 0; }
+  .navbar-toggleable-xs .navbar-nav .nav-item {
+    float: none; } }
+
 #navbar-collapsed-button {
   outline: 0;
 }
 
-/*Testing to make the navbar see-through*/
-/*#navtest {*/
-/*background: none;*/
-/*border-bottom: solid 1px snow;*/
-/*}*/
 
 .nav-see-through {
   background: none !important;
-  border-bottom: solid 1px #eee;
+  border-bottom: solid 1px $white-border;
   transition: all 0.5s ease;
 }
 
 .nav-orange {
   background: white !important;
   transition: all 0.5s ease;
-  border-bottom: solid 1px #eee;
+  border-bottom: solid 1px #eeeeee;
   .navbar-toggler {
     color: $orange;
   }
@@ -140,31 +155,10 @@ nav {
   text-align: left;
 }
 
+//Cards' CSS
 
-@media (max-width: 543px) {
-  .filler {
-    padding: 30px;
-  }
-}
-@media (min-width: 544px) {
-  .filler {
-    padding: 35px;
-  }
-}
-@media (min-width: 768px) {
-  .filler {
-    padding: 40px;
-  }
-}
-@media (min-width: 992px) {
-  .filler {
-    padding: 45px;
-  }
-}
-@media (min-width: 1200px) {
-  .filler {
-    padding: 50px;
-  }
+.card-frame .card-front .card img {
+  border: 1.5px solid $card-img-border;
 }
 
 .card-container {
@@ -209,64 +203,45 @@ nav {
 
 .card-frame .card-front .card {
   margin-bottom: 0px;
-  background-color: whitesmoke;
+  background-color: $white-card-bg;
+  text-align: center;
 
 }.card-frame .card-back .card {
    margin-bottom: 0px;
    height: 100%;
+   text-align: center;
  }
-
-
-
-.titles {
-  text-align: center;
-  text-transform: capitalize;
-  color: $white-text;
-  font-family: $main-font;
-}
-
-.footer-title{
-  @extend .titles;
-  color: #222222;
-}
 
 .card-img-space {
   margin-top: 0.5rem;
 }
 
-.btn-custom {
+.card-button {
   background-color: $orange;
   color: $white-text;
   font-family: $main-font;
 }
 
-.btn-custom:focus, .learn-more-btn:focus {
+.card-button:focus, .view-projects-btn:focus {
   outline: 0 !important;
 }
 
-.btn-custom:hover, .learn-more-btn:hover {
+.card-button:hover, .view-projects-btn:hover {
   background-color: $orange-focus;
 }
 
-#footer-title {
-  margin-top: 1em;
+//Footer's CSS
+.footer-title{
+  @extend .titles;
+  color: #222222;
 }
 
-.overflow-fix {
-  height: auto !important;
+.footer-text {
+  color: $black;
 }
 
-.navbar-toggler {
-  color: white; }
-.navbar-toggler:focus {
-  outline: none; }
-
-@media (max-width: 543px) {
-  .navbar-toggleable-xs {
-    clear: both; }
-  .navbar-toggleable-xs .navbar-nav {
-    float: none !important; }
-  .navbar-toggleable-xs .navbar-nav .nav-item + .nav-item {
-    margin-left: 0; }
-  .navbar-toggleable-xs .navbar-nav .nav-item {
-    float: none; } }
+.footer-paragraph {
+  @extend .footer-text;
+  text-align: center;
+  padding-bottom: 1em;
+}

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="js/underscore.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
@@ -12,21 +13,19 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/navbar_handler.js"></script>
     <script src="js/chart.js"></script>
-    <script src="js/experience_charts.js"></script>
-    <script src="js/header_button.js"></script>
-    <meta charset="UTF-8">
     <title>My Personal Portfolio</title>
 </head>
 <body>
 <div  id="wrapper">
-        <nav id="navtest" class="navbar navbar-fixed-top navbar-full navbar-dark bg-inverse">
-            <div class="navbar-header">
+        <nav id="navtest" class="navbar navbar-fixed-top navbar-full navbar-dark bg-inverse nav-see-through">
+            <div class="test">
                 <a class="navbar-brand" href="#">Home</a>
+                <button id="navbar-collapsed-button" class="navbar-toggler hidden-sm-up pull-xs-right"
+                        type="button" data-toggle="collapse" data-target="#collapsingNav" aria-expanded="false" aria-label="Toggle navigation">
+                    &#9776;
+                </button>
             </div>
-            <button id="navbar-collapsed-button" class="navbar-toggler hidden-sm-up pull-xs-right"
-                    type="button" data-toggle="collapse" data-target="#collapsingNav" aria-expanded="false" aria-label="Toggle navigation">
-                &#9776;
-            </button>
+
 
             <div class="collapse navbar-toggleable-xs" id="collapsingNav">
                 <ul class="nav navbar-nav pull-sm-right">
@@ -43,31 +42,29 @@
             </div>
         </nav>
         <div class="container">
-            <div class="filler"></div>
             <div class="row">
-                <div class="col-md-2 offset-md-5 col-xs-6 offset-xs-3">
+                <div class="m-x-auto">
                     <img class="img-fluid img-circle img-thumbnail" src="img/profile.png">
                     <hr class="customHr">
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-8 offset-md-2 col-xs-12">
-                    <h6 class="header-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h6>
                 </div>
             </div>
             <div class="row">
-                <button id="learnMoreBtn" class="btn learn-more-btn">View projects</button>
+                <button id="learnMoreBtn" class="btn view-projects-btn">View projects</button>
             </div>
         </div>
     </div>
-
+<!--Charts-->
 <div id="wrapper3">
     <div class="container-fluid">
         <div class="col-md-6">
             <canvas id="myChart"></canvas>
-            <script src="js/experience_charts.js"></script>
         </div>
         <div class="col-md-6">
             <canvas id="myChart2"></canvas>
@@ -75,10 +72,12 @@
         </div>
     </div>
 </div>
+<!--Card go here-->
 <div id="wrapper2">
     <div class="container">
         <h2 class="titles">Experience</h2>
         <div class="row">
+            <!--Card 1-->
             <div class="col-sm-6 col-md-4">
                 <div class="card-container">
                     <div class="card-frame">
@@ -96,10 +95,7 @@
                                 <div class="card-block">
                                     <h4 class="card-title">A Tichu Counter</h4>
                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    <a href="https://www.microsoft.com/en-us/store/p/a-tichu-counter/9nblggh0f5t2"
-                                       target="_blank">
-                                        <button class="btn btn-custom">Download</button>
-                                    </a>
+
                                 </div>
 
                             </div>
@@ -107,6 +103,9 @@
                     </div>
                 </div>
             </div>
+            <!--End of card 1-->
+
+            <!--Card 2-->
             <div class="col-sm-6 col-md-4">
                 <div class="card-container">
                     <div class="card-frame">
@@ -124,10 +123,7 @@
                                 <div class="card-block">
                                     <h4 class="card-title">A Tichu Counter</h4>
                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    <a href="https://www.microsoft.com/en-us/store/p/a-tichu-counter/9nblggh0f5t2"
-                                       target="_blank">
-                                        <button class="btn btn-custom">Download</button>
-                                    </a>
+
                                 </div>
 
                             </div>
@@ -135,6 +131,9 @@
                     </div>
                 </div>
             </div>
+            <!--End of card 2-->
+
+            <!--Card 3-->
             <div class="col-sm-6 col-md-4">
                 <div class="card-container">
                     <div class="card-frame">
@@ -152,10 +151,34 @@
                                 <div class="card-block">
                                     <h4 class="card-title">A Tichu Counter</h4>
                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    <a href="https://www.microsoft.com/en-us/store/p/a-tichu-counter/9nblggh0f5t2"
-                                       target="_blank">
-                                        <button class="btn btn-custom">Download</button>
-                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End of card 3-->
+
+            <!--Card 4-->
+            <div class="col-sm-6 col-md-4">
+                <div class="card-container">
+                    <div class="card-frame">
+                        <div class="card-front">
+                            <div class="card">
+                                <img src="img/a-tichu-counter.png" alt="Alt text" class="img-fluid img-circle m-x-auto d-block card-img-space">
+                                <div class="card-block">
+                                    <h4 class="card-title">A Tichu Counter</h4>
+                                    <p class="card-text">A simple program for counting scores scores in a game of tichu.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="card">
+                                <div class="card-block">
+                                    <h4 class="card-title">A Tichu Counter</h4>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
                                 </div>
 
                             </div>
@@ -163,34 +186,36 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="card-container">
-                    <div class="card-frame">
-                        <div class="card-front">
-                            <div class="card">
-                                <img src="img/a-tichu-counter.png" alt="Alt text" class="img-fluid img-circle m-x-auto d-block card-img-space">
-                                <div class="card-block">
-                                    <h4 class="card-title">A Tichu Counter</h4>
-                                    <p class="card-text">A simple program for counting scores scores in a game of tichu.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-back">
-                            <div class="card">
-                                <div class="card-block">
-                                    <h4 class="card-title">A Tichu Counter</h4>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    <a href="https://www.microsoft.com/en-us/store/p/a-tichu-counter/9nblggh0f5t2"
-                                       target="_blank">
-                                        <button class="btn btn-custom">Download</button>
-                                    </a>
-                                </div>
+            <!--End of card 4-->
 
+            <!--Card 5-->
+            <div class="col-sm-6 col-md-4">
+                <div class="card-container">
+                    <div class="card-frame">
+                        <div class="card-front">
+                            <div class="card">
+                                <img src="img/a-tichu-counter.png" alt="Alt text" class="img-fluid img-circle m-x-auto d-block card-img-space">
+                                <div class="card-block">
+                                    <h4 class="card-title">A Tichu Counter</h4>
+                                    <p class="card-text">A simple program for counting scores scores in a game of tichu.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="card">
+                                <div class="card-block">
+                                    <h4 class="card-title">A Tichu Counter</h4>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!--End of card 5-->
+
+            <!--Card 6-->
             <div class="col-sm-6 col-md-4">
                 <div class="card-container">
                     <div class="card-frame">
@@ -210,7 +235,7 @@
                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                     <a href="https://www.microsoft.com/en-us/store/p/a-tichu-counter/9nblggh0f5t2"
                                        target="_blank">
-                                        <button class="btn btn-custom">Download</button>
+                                        <button class="btn card-button">Download</button>
                                     </a>
                                 </div>
                             </div>
@@ -218,36 +243,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="card-container">
-                    <div class="card-frame">
-                        <div class="card-front">
-                            <div class="card">
-                                <img src="img/a-tichu-counter.png" alt="Alt text" class="img-fluid img-circle m-x-auto d-block card-img-space">
-                                <div class="card-block">
-                                    <h4 class="card-title">A Tichu Counter</h4>
-                                    <p class="card-text">A simple program for counting scores scores in a game of tichu.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-back">
-                            <div class="card">
-                                <div class="card-block">
-                                    <h4 class="card-title">A Tichu Counter</h4>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    <a href="https://www.microsoft.com/en-us/store/p/a-tichu-counter/9nblggh0f5t2"
-                                       target="_blank">
-                                        <button class="btn btn-custom">Download</button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!--End of card 6-->
         </div>
     </div>
 </div>
+<!--Contact info-->
 <div id="wrapper4">
     <div class="container">
         <div class="row">
@@ -270,7 +270,6 @@
                 <span class="footer-text">07700 900490</span>
             </div>
         </div>
-
     </div>
 </div>
 </body>

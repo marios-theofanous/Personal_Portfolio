@@ -1,21 +1,33 @@
-/**
- * Created by Marios on 04/09/2016.
- */
+//Change these two variable to manipulate the color of the graphs
+var bgColor = "rgba(240,95,64,0.2)";
+var borderColor = "rgba(240,94,64,1)";
+
+//You can change the labels and data for each chart here
+//Make sure to have an equal number of labels and data
+//Chart 1 labels and data
+chartOneLabels = ["PHP", "JS", "HTML", "CSS", "Angular", "React"];
+chartOneData = [65, 59, 90, 81, 56, 55];
+//Chart 2 labels and data
+chartTwoLabels = ["Java", "Python", "C++", "C#", "Lua"];
+chartTwoData = [65, 59, 90, 81, 56];
+
+//***CHART CODE***
+//Chart 1
 var ctx = document.getElementById("myChart");
 var myChart = new Chart(ctx, {
     type: 'radar',
     data: {
-        labels: ["PHP", "JS", "HTML", "CSS", "Angular", "React"],
+        labels: chartOneLabels,
         datasets: [
             {
                 label: "Web development",
-                backgroundColor: "rgba(240,95,64,0.2)",
-                borderColor: "rgba(240,94,64,1)",
-                pointBackgroundColor: "rgba(240,95,64,1)",
+                backgroundColor: bgColor,
+                borderColor: borderColor,
+                pointBackgroundColor: borderColor,
                 pointBorderColor: "#fff",
                 pointHoverBackgroundColor: "#fff",
                 pointHoverBorderColor: "rgba(34,34,34,1)",
-                data: [65, 59, 90, 81, 56, 55]
+                data: chartOneData
             }
         ]
     },
@@ -34,21 +46,22 @@ var myChart = new Chart(ctx, {
     }
 })
 
+//Chart 2
 var ctx2 = document.getElementById("myChart2");
 var myChart2 = new Chart(ctx2, {
     type: 'radar',
     data: {
-        labels: ["Java", "Python", "C++", "C#", "Lua"],
+        labels: chartTwoLabels,
         datasets: [
             {
                 label: "Other languages",
-                backgroundColor: "rgba(240,95,64,0.2)",
-                borderColor: "rgba(240,94,64,1)",
-                pointBackgroundColor: "rgba(240,95,64,1)",
+                backgroundColor: bgColor,
+                borderColor: borderColor,
+                pointBackgroundColor: borderColor,
                 pointBorderColor: "#fff",
                 pointHoverBackgroundColor: "#fff",
                 pointHoverBorderColor: "rgba(34,34,34,1)",
-                data: [65, 59, 90, 81, 56]
+                data: chartTwoData
             }
         ]
     },
