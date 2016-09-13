@@ -1,0 +1,6 @@
+css/styles.css
+dist/
+node_modules/
+/css/styles.css.map
+.idea
+.idea/Personal_Portfolio.iml

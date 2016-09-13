@@ -39,7 +39,7 @@ $(window).on('scroll', _.debounce(function () {
 
 function navbarChanger() {
     var scrollTop = $(window).scrollTop();
-    if(scrollTop==0){
+    if(scrollTop===0){
         $("#navtest").addClass("nav-see-through").removeClass("nav-orange");
     } else {
         $("#navtest").removeClass("nav-see-through").addClass("nav-orange");
@@ -57,7 +57,7 @@ function navbarChanger() {
     })
 
     //If the mexElement is null then we are before any of the wrappers included in the navbar
-    if(maxElement==null){
+    if(maxElement===null){
         $(".nav-link").each(function () {
             $(this).removeClass("active");
         })
